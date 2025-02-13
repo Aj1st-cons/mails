@@ -1,0 +1,17 @@
+{
+  "name": "mailgun-email-api",
+  "version": "1.0.0",
+  "description": "Email API using Mailgun and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mailgun-js": "^0.22.0",
+    "dotenv": "^8.2.0",
+    "cors": "^2.8.5"
+  },
+  "author": "",
+  "license": "ISC"
+}
