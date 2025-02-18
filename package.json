@@ -1,17 +1,15 @@
 {
-  "name": "vercel-email",
+  "name": "send-email",
   "version": "1.0.0",
-  "description": "A serverless function to send emails using Resend API on Vercel",
-  "main": "api/send-email.js",
+  "description": "Send email using Resend API",
+  "main": "send-email.js",
   "scripts": {
-    "start": "vercel dev",
-    "deploy": "vercel"
+    "start": "node send-email.js"
   },
   "dependencies": {
-    "node-fetch": "^3.3.1"
+    "node-fetch": "^2.6.1"
   },
-  "engines": {
-    "node": ">=16"
-  },
-  "type": "module"
+  "devDependencies": {},
+  "author": "Your Name",
+  "license": "ISC"
 }
