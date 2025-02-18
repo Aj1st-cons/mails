@@ -1,0 +1,10 @@
+{
+  "name": "email-sender",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "resend": "^2.0.0"
+  }
+}
