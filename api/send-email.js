@@ -11,10 +11,14 @@ export default async function (req, res) {
         return res.status(400).json({ error: "Missing required fields" });
     }
 
+    const API_KEY = process.env.RESEND_API_KEY;
+
+    // API call to Resend service
     const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
             from: "admin@aj1st.com",
@@ -25,6 +29,7 @@ export default async function (req, res) {
     });
 
     const result = await response.json();
+
     if (response.ok) {
         return res.status(200).json({ success: true, result });
     } else {
