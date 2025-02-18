@@ -11,7 +11,8 @@ export default async function (req, res) {
         return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const API_KEY = process.env.RESEND_API_KEY;
+    // Use the Resend API key directly here if you're not using environment variables
+    const API_KEY = "re_6Uc61pcr_HHiSHLbzcEtMs5Gq2tsdoud6"; // Replace with your actual API key if needed
     const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
@@ -19,7 +20,7 @@ export default async function (req, res) {
             Authorization: `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-            from: "admin@aj1st.com",
+            from: "admin@aj1st.com", // Your email
             to: [adminEmail, referrerEmail],
             subject: "New Form Submission",
             text: emailBody
@@ -32,4 +33,4 @@ export default async function (req, res) {
     } else {
         return res.status(500).json({ error: "Email sending failed", details: result });
     }
-          }
+}
