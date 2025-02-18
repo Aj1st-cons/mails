@@ -19,7 +19,7 @@ export default async function (req, res) {
             Authorization: `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-            from: "noreply@yourdomain.com",
+            from: "admin@aj1st.com",
             to: [adminEmail, referrerEmail],
             subject: "New Form Submission",
             text: emailBody
