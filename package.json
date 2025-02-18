@@ -1,17 +1,16 @@
 {
-  "name": "mailgun-email-api",
+  "name": "vercel-email",
   "version": "1.0.0",
-  "description": "Email API using Mailgun and Express",
-  "main": "server.js",
+  "description": "A serverless function to send emails using Resend API on Vercel",
+  "main": "api/send-email.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "vercel dev",
+    "deploy": "vercel"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "mailgun-js": "^0.22.0",
-    "dotenv": "^8.2.0",
-    "cors": "^2.8.5"
+    "node-fetch": "^3.3.1"
   },
-  "author": "",
-  "license": "ISC"
+  "engines": {
+    "node": ">=16"
+  }
 }
